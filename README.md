@@ -7,3 +7,5 @@ Esse projeto foi iniciado com [Create React App](https://github.com/facebook/cre
 
 Aqui temos a parte da visual da aplicação, trabalhando em conjunto com o backend para fim de prover um ambiente de compartilhamento de arquivos em tempo real.
 
+O Backend da aplicação você encontra neste link: https://github.com/leocalmeida/omnistack06-backend
+
