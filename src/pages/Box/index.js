@@ -4,7 +4,7 @@ import api from "../../services/api";
 import { formatDistanceToNow, parseISO } from "date-fns";
 import pt from "date-fns/locale/pt-BR";
 import DropZone from "react-dropzone";
-import socket from "socket.io-client";
+import io from "socket.io-client";
 
 import { MdInsertDriveFile } from "react-icons/md";
 import logo from "../../assets/logo.svg";
@@ -21,16 +21,18 @@ export default function Box(props) {
   }, [localId]);
 
   function subscribeToNewFiles() {
-    const io = socket("https://omnistack-06-backnd.herokuapp.com");
-    io.emit("connectRoom", localId);
-    io.on("file", (data) => {
-      box.files && setBox({ ...box, files: [data, ...box.files] });
+    const socket = io("https://omnistack-06-backnd.herokuapp.com");
+    // const socket = io("http://localhost:3333");
+
+    socket.on("file", (file) => {
+      box.files && setBox({ ...box, files: [file, ...box.files] });
     });
   }
 
   function handleUpload(files) {
     files.forEach((file) => {
       const data = new FormData();
+
       const boxId = props.match.params.id;
 
       data.append("file", file);
