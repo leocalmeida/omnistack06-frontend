@@ -13,3 +13,15 @@ Assim um time de pessoas, poderiam compartilhar dados uns com os outros para fim
 * Para conferir o resultado final, basta clicar no link a seguir: [Aplicação](https://omnistack-06-frontnd.herokuapp.com/)
 
 
+*IMPORTANTE! O Upload de arquivos foi desabilitado por motivos de segurança.*
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+![Preview](https://res.cloudinary.com/almleoc/image/upload/v1590327299/README.md/OmniStack06/RocketBox03_orq8fp.png)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+![Preview02](https://res.cloudinary.com/almleoc/image/upload/v1590326809/README.md/OmniStack06/RocketBox_02_dwbm2k.png)
+
+
