@@ -29,16 +29,22 @@ export default function Box(props) {
     });
   }
 
-  function handleUpload(files) {
-    files.forEach((file) => {
-      const data = new FormData();
+  async function handleUpload(files) {
+    const validation = await api.get("validation");
 
-      const boxId = props.match.params.id;
+    if (validation.data.fail != null) {
+      alert(validation.data.fail);
+    } else {
+      files.forEach((file) => {
+        const data = new FormData();
 
-      data.append("file", file);
+        const boxId = props.match.params.id;
 
-      api.post(`boxes/${boxId}/files`, data);
-    });
+        data.append("file", file);
+
+        api.post(`boxes/${boxId}/files`, data);
+      });
+    }
   }
 
   subscribeToNewFiles();
